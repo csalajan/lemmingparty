@@ -10,6 +10,9 @@ require.config({
 require(['body/Lemming'], function() {
 	require(
 		[
+		'body/TankLemming',
+		'body/FallLemming',
+		'body/FlyLemming',
 		'game/Factory'
 		], 
 		function() {

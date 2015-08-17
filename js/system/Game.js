@@ -4,7 +4,7 @@
 		var screen = canvas.getContext('2d');
 		var audio = new Audio();
 		audio.src = 'sounds/sound.mp3';
-		audio.play();
+		//audio.play();
 		canvas.width = document.body.clientWidth;
 		canvas.height = document.body.clientHeight;
 
@@ -13,19 +13,23 @@
 			y: canvas.height
 		};
 
-		this.bodies = [new Lemming(this, gameSize)];
-
-		var self = this;
+		this.bodies = [];
 
 		var tick = function() {
-			self.update(gameSize);
-			self.draw(screen, gameSize);
+			this.update(gameSize);
+			this.draw(screen, gameSize);
 			requestAnimationFrame(tick);
-		}
+		}.bind(this);
 
 		tick();
-
-		this.lemmingFactory = new Factory(Lemming, this, gameSize);
+		
+		this.TankLemmingFactory = new Factory(TankLemming, this, gameSize);
+		setTimeout(function() {
+			this.FallLemmingFactory = new Factory(FallLemming, this, gameSize);
+		}.bind(this), 225);
+		setTimeout(function() {
+			this.FlyLemmingFactory = new Factory(FlyLemming, this, gameSize);
+		}.bind(this), 425);
 
 	}
 
