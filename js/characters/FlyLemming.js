@@ -17,7 +17,7 @@ var FlyLemming = function(game, gameSize) {
 	this.size = {x: 128, y: 65};
 	this.center = {
 		x: gameSize.x,
-		y: Math.random() * (gameSize.y - this.size.y)
+		y: Math.random() * (gameSize.y - (this.size.y * 2))
 	};
 	this.mov = -this.speed;
 	if (this.game.banners) {

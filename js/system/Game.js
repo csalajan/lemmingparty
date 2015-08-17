@@ -4,7 +4,7 @@
 		var screen = canvas.getContext('2d');
 		var audio = new Audio();
 		audio.src = 'sounds/sound.mp3';
-		this.banners = false;
+		this.banners = true;
 		//audio.play();
 		canvas.width = document.body.clientWidth;
 		canvas.height = document.body.clientHeight;
