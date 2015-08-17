@@ -14,7 +14,7 @@ Factory.prototype = {
 			var body = new self.template(self.game, self.gameSize);
 			self.game.addBody(body);
 			//}
-		}, 1500);
+		}, 2500);
 	},
 	stop: function() {
 		clearInterval(this.timer);

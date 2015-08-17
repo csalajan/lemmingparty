@@ -20,6 +20,9 @@ var FlyLemming = function(game, gameSize) {
 		y: Math.random() * (gameSize.y - this.size.y)
 	};
 	this.mov = -this.speed;
+	if (this.game.banners) {
+		this.game.addBody(new Banner(game, gameSize, this));
+	}
 }
 
 FlyLemming.prototype = Lemming.prototype;

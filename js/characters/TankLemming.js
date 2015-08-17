@@ -19,6 +19,9 @@ var TankLemming = function(game, gameSize) {
 	];
 
 	this.pos = 0;
+	if (this.game.banners) {
+		this.game.addBody(new Flag(game, gameSize, this));
+	}
 }
 
 TankLemming.prototype = Lemming.prototype;

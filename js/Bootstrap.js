@@ -13,6 +13,8 @@ require(['body/Lemming'], function() {
 		'body/TankLemming',
 		'body/FallLemming',
 		'body/FlyLemming',
+		'body/Banner',
+		'body/Flag',
 		'game/Factory'
 		], 
 		function() {

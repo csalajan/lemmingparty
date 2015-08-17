@@ -4,7 +4,8 @@
 		var screen = canvas.getContext('2d');
 		var audio = new Audio();
 		audio.src = 'sounds/sound.mp3';
-		audio.play();
+		this.banners = false;
+		//audio.play();
 		canvas.width = document.body.clientWidth;
 		canvas.height = document.body.clientHeight;
 
@@ -26,10 +27,10 @@
 		this.TankLemmingFactory = new Factory(TankLemming, this, gameSize);
 		setTimeout(function() {
 			this.FallLemmingFactory = new Factory(FallLemming, this, gameSize);
-		}.bind(this), 225);
+		}.bind(this), 1000);
 		setTimeout(function() {
 			this.FlyLemmingFactory = new Factory(FlyLemming, this, gameSize);
-		}.bind(this), 425);
+		}.bind(this), 2000);
 
 	}
 
